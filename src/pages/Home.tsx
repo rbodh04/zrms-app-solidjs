@@ -1,35 +1,25 @@
+// src/pages/HomePage.tsx
+import { For } from "solid-js";
 import ProductCard from "../components/ProductCard";
+import SearchFilterBar from "../components/SearchFilterBar";
 
-const dummyProducts = [
-  {
-    id: 1,
-    title: "Cool Hoodie",
-    price: 49.99,
-    image: "https://picsum.photos/300/200",
-  },
-  {
-    id: 2,
-    title: "Classic Sneakers",
-    price: 89.99,
-    image: "https://picsum.photos/id/1003/300/200",
-  },
-  {
-    id: 3,
-    title: "Stylish Watch",
-    price: 149.99,
-    image: "https://picsum.photos/id/1011/300/200",
-  },
+const mockProducts = [
+  { id: 1, name: "Shoes", price: 49.99, image: "/images/images.jpg" },
+  { id: 2, name: "Backpack", price: 89.99, image: "/images/images.jpeg" },
+  { id: 3, name: "Jacket", price: 129.99, image: "/images/images.jpeg" },
 ];
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <div class="p-6">
-      <h1 class="text-3xl font-bold mb-4">🔥 Featured Products</h1>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-        {dummyProducts.map(product => (
-          <ProductCard product={product} />
-        ))}
+    <main class="p-4">
+      <h1 class="text-2xl font-semibold text-center mb-4">Welcome to ZRMS Store</h1>
+      <SearchFilterBar />
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+        <For each={mockProducts}>
+          {(product) => <ProductCard product={product} />}
+        </For>
       </div>
-    </div>
+    </main>
   );
 }
