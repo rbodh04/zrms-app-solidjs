@@ -1,10 +1,31 @@
-import { Route, Router } from "@solidjs/router";
-import Home from "./pages/HomePage";
+import { Router, Route } from "@solidjs/router";
+import HomePage from "./pages/HomePage";
 import ProductDetail from "./pages/ProductDetail";
-import Cart from "./pages/Cart";
+import CartPage from "./pages/CartPage";
 
-export default function App() {
+
+import { createSignal } from "solid-js";
+
+const [cart, setCart] = createSignal([]);
+
+const addToCart = (product) => {
+  setCart([...cart(), product]);
+};
+
+
+
+function App() {
   return (
-    <Home/>
+    <Router>
+      <Route path="/" component={HomePage} />
+      <Route path="/product/:id" component={ProductDetail} />
+      <Route path="/cart" component={CartPage} />
+    </Router>
   );
 }
+
+export default App;
+
+
+
+// Pass `cart` and `addToCart` through context or props to components.

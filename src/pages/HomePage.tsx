@@ -7,11 +7,9 @@ const HomePage = () => {
   return (
     <>
       <Navbar />
-      <main class="p-4 max-w-7xl mx-auto">
-        <HeroBanner />
+      <HeroBanner />
         <CategoryScroller />
         <ProductGrid />
-      </main>
     </>
   );
 };
