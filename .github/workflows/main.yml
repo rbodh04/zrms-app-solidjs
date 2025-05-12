@@ -1,3 +1,8 @@
+on:
+  push:
+    branches:
+      - main
+
 steps:
   - name: Generate performance reports
     uses: "lannonbr/puppeteer-screenshot-action@1.0.0"
