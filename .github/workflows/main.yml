@@ -1,47 +1,5 @@
-name: Generate HTML Report with Puppeteer
-
-on:
-  push:
-    branches:
-      - main
-
-jobs:
-  report:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '16'
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Build your app
-        run: npm run build
-
-      # Run the Puppeteer Screenshot Action
-      - name: Take Screenshot of Report Page
-        uses: marketplace/actions/puppeteer-screenshot-action@latest
-        with:
-          url: 'http://localhost:3000/report'   # or your static report HTML path
-          output: 'reports/report.png'            # output screenshot path
-          viewport_width: 1280
-          viewport_height: 800
-
-      # Or if the action supports PDF, use accordingly
-      # - name: Generate PDF
-      #   uses: marketplace/actions/puppeteer-pdf@latest
-      #   with:
-      #     url: 'http://localhost:3000/report'
-      #     output: 'reports/report.pdf'
-
-      - name: Upload report screenshot
-        uses: actions/upload-artifact@v3
-        with:
-          name: report-screenshot
-          path: reports/report.png
+steps:
+  - name: Generate performance reports
+    uses: "lannonbr/puppeteer-screenshot-action@1.0.0"
+    with:
+      url: https://github.com
