@@ -1,0 +1,3 @@
+.navbar-container {
+    @apply w-full bg-primary text-text px-4 py-3 shadow-md flex items-center justify-between;
+  }

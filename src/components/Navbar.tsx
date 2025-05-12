@@ -4,7 +4,7 @@ import ZrmsLogo from '../assets/zrms-logo.svg'; // adjust path based on file loc
 
 const Navbar: Component = () => {
   return (
-    <nav class="w-full bg-white px-4 py-3 shadow-md flex items-center justify-between">
+    <nav class="navbar-container">
       {/* Left side: Hamburger + Logo */}
       <div class="flex items-center gap-2">
         {/* Hamburger Icon */}
