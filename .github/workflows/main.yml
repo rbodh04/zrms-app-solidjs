@@ -8,6 +8,6 @@ jobs:
 
     steps:
       - name: Generate performance reports
-        uses: "lannonbr/puppeteer-screenshot-action@1.0.0"
+        uses: "lannonbr/puppeteer-screenshot-action@latest"
         with:
           url: https://github.com
