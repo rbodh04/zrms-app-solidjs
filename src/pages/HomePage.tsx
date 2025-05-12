@@ -4,6 +4,8 @@ import CategoryScroller from "../components/CategoryScroller";
 import ProductGrid from "../components/ProductGrid";
 import SearchBar from "../components/SearchBar";
 import LocationView from "../components/LocationView";
+import HeroBannerCarousel from "../components/HeroBannerCarousel";
+
 
 const HomePage = () => {
   return (
@@ -11,9 +13,9 @@ const HomePage = () => {
       <Navbar />
       <LocationView />
       <SearchBar />
-      <HeroBanner />
-        <CategoryScroller />
-        <ProductGrid />
+      <HeroBannerCarousel />
+      <CategoryScroller />
+      <ProductGrid />
     </>
   );
 };

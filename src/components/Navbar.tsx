@@ -1,4 +1,6 @@
 import { Component } from "solid-js";
+import ZrmsLogo from '../assets/zrms-logo.svg'; // adjust path based on file location
+
 
 const Navbar: Component = () => {
   return (
@@ -24,7 +26,7 @@ const Navbar: Component = () => {
         </button>
 
         {/* Logo */}
-        <div class="text-xl font-bold text-blue-600">ZRMS</div>
+        <img src={ZrmsLogo} alt="ZRMS Logo" class="h-14 w-32"  />
       </div>
 
       {/* Right side: Profile + Cart */}
