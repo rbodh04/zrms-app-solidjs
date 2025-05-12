@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Generate performance reports
-        uses: "lannonbr/puppeteer-screenshot-action@latest"
+      - name: Puppeteer Screenshot Action
+        uses: lannonbr/puppeteer-screenshot-action@1.3.1
         with:
           url: https://github.com
