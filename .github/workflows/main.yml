@@ -2,9 +2,12 @@ on:
   push:
     branches:
       - main
+jobs:
+  report:
+    runs-on: ubuntu-latest
 
-steps:
-  - name: Generate performance reports
-    uses: "lannonbr/puppeteer-screenshot-action@1.0.0"
-    with:
-      url: https://github.com
+    steps:
+      - name: Generate performance reports
+        uses: "lannonbr/puppeteer-screenshot-action@1.0.0"
+        with:
+          url: https://github.com
