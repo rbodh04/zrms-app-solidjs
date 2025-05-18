@@ -27,6 +27,16 @@
     --color-muted: #b0b0b0;
     --color-border: #333333;
   }
+
+  [data-theme="dark"] {
+    --color-primary: #1e3a8a;
+    --color-secondary: #facc15;
+    --color-background: #121212;
+    --color-surface: #1e1e1e;
+    --color-text: #ffffff;
+    --color-muted: #b0b0b0;
+    --color-border: #333333;
+  }
   
   /* Base Elements */
   body {
